@@ -1,0 +1,10 @@
+version: '2'
+services:
+    web:
+        image: rabbitmq_test:2.0
+        build: ./docker_build
+        ports:
+            - "8111:80"
+            - "4431:443"
+        volumes:
+            - ./symfonyProject/:/var/www/symfonyProject/
